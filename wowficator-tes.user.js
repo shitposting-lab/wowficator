@@ -27,7 +27,12 @@ var replacer = function(){
       .replace(/муж/i, "н'вах")   
       .replace(/патриарх/i, 'Трибун')
       .replace(/транс/i, 'Телванни')
-      .replace(/фемин/i, 'рас')    
+      .replace(/фемин/i, 'рас')
+      .replace(/Путин/i, 'Сота Сил')
+      .replace(/Навальный/i, 'Нереварин')
+      .replace(/Росси/i, 'Импери')
+      .replace(/COVID/i, 'МОР')
+      .replace(/коронавирус/i, 'мор')
       .replace(/радфем/i, "Шестой Дом");
     $(a).html(rep);
   });
