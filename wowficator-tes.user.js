@@ -31,8 +31,7 @@ var replacer = function(){
       .replace(/Путин/i, 'Сота Сил')
       .replace(/Навальный/i, 'Нереварин')
       .replace(/Росси/i, 'Импери')
-      .replace(/фемин/i, 'рас')
-      .replace(/COVID/i, 'мор')
+      .replace(/COVID/i, 'МОР')
       .replace(/коронавирус/i, 'мор')
       .replace(/радфем/i, "Шестой Дом");
     $(a).html(rep);
