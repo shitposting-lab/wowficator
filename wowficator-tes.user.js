@@ -27,13 +27,13 @@ var replacer = function(){
       .replace(/муж/i, "н'вах")   
       .replace(/патриарх/i, 'Трибун')
       .replace(/транс/i, 'Телванни')
-      .replace(/фемин/i, 'рас'),
-      .replace(/Путин/i, 'Сота Сил'),
-      .replace(/Навальный/i, 'Нереварин'),
-      .replace(/Росси/i, 'Импери'),
-      .replace(/фемин/i, 'рас'),
-      .replace(/COVID/i, 'мор'),
-      .replace(/коронавирус/i, 'мор'),
+      .replace(/фемин/i, 'рас')
+      .replace(/Путин/i, 'Сота Сил')
+      .replace(/Навальный/i, 'Нереварин')
+      .replace(/Росси/i, 'Импери')
+      .replace(/фемин/i, 'рас')
+      .replace(/COVID/i, 'мор')
+      .replace(/коронавирус/i, 'мор')
       .replace(/радфем/i, "Шестой Дом");
     $(a).html(rep);
   });
