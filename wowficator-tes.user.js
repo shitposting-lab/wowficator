@@ -1,10 +1,15 @@
 // ==UserScript==
-// @name        twitter shitpost wow'o'ficator
-// @namespace   *.twitter.com
-// @include     *
-// @version     1
+// @name        Twitter Shitpost2WOW Replacer
+// @version     2020.10.22
+// @description Shitpost replacer -- TES version
+// @match       https://twitter.com/*
+// @icon        https://www.google.com/s2/favicons?domain=twitter.com
+// @author      Shitposting-Lab
 // @grant       none
-// @require https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js 
+// @require     https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js
+// @supportURL  https://github.com/shitposting-lab/wowficator/issues
+// @updateURL   https://github.com/shitposting-lab/wowficator/raw/main/wowficator-wow.user.js
+// @downloadURL https://github.com/shitposting-lab/wowficator/raw/main/wowficator-wow.user.js
 // ==/UserScript==
 var replacer = function(){
   $('article').each((i,a) => {
