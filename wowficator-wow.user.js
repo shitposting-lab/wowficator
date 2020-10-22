@@ -2,11 +2,11 @@
 // @name        Twitter Shitpost2WOW Replacer
 // @version     2020.10.22
 // @description Replace shitposts in Twitter to WOW terms
-// @match       *.twitter.com
+// @match       https://twitter.com/*
 // @icon        https://www.google.com/s2/favicons?domain=twitter.com
 // @author      Shitposting-Lab
 // @grant       none
-// @require     https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js 
+// @require     https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js
 // @supportURL  https://github.com/shitposting-lab/wowficator/issues
 // @updateURL   https://github.com/shitposting-lab/wowficator/raw/main/wowficator-wow.user.js
 // @downloadURL https://github.com/shitposting-lab/wowficator/raw/main/wowficator-wow.user.js
@@ -43,7 +43,8 @@ var replacer = function() {
 			.replace ( /парни/i, "таурены" )
 			.replace ( /парень/i, "таурен" )
 			.replace ( /мужчины/i, "орки" )
-			.replace ( /мужчин/i, "орков" )
+			.replace ( /мужчина/i, "орк" )
+			.replace ( /мужчин/i, "орк" )
 			.replace ( /мужик/i, "орк" )
 
 			.replace ( /абьюзер/i, "дворф" )
