@@ -1,64 +1,67 @@
 // ==UserScript==
-// @name        twitter shitpost wow'o'ficator
-// @namespace   *.twitter.com
-// @include     *
-// @version     1
+// @name        Twitter Shitpost2WOW Replacer
+// @version     2020.10.22
+// @description Replace shitposts in Twitter to WOW terms
+// @match       https://twitter.com/*
+// @icon        https://www.google.com/s2/favicons?domain=twitter.com
+// @author      Shitposting-Lab
 // @grant       none
-// @require https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js 
+// @require     https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js
+// @supportURL  https://github.com/shitposting-lab/wowficator/issues
+// @updateURL   https://github.com/shitposting-lab/wowficator/raw/main/wowficator-wow.user.js
+// @downloadURL https://github.com/shitposting-lab/wowficator/raw/main/wowficator-wow.user.js
 // ==/UserScript==
-var replacer = function(){
-  $('article').each((i,a) => {
-    var rep = $(a).html()
-    	.replace('феминизм', 'альянссосатт')
-      .replace('феминистки', 'ордынцы')
-      .replace(/наркоман/i, "некромант")
-      .replace('радфем', "Лок'Тар")
-      .replace('никсельпиксель','сильвана')
-      .replace('баб','лучниц')
-      .replace(/транс/i, "грифон")
-      .replace('война', "джихад")
-      .replace('президент', "император")
-      .replace('патриарх', "матриарх")
-      .replace('женщин', "ночных эльфов")
-      .replace(/проституция/i, "золотые рудники")
-      .replace('сексуализация', "обращение в нежить")
-      .replace('парни', "таурены")
-      .replace('мужчины', "орки")
-      .replace('интерсек', "тролли")
-      .replace('русских', "ордынских")
-      .replace('российских', "ордынских")
-      .replace('фем', "тролль")
-      .replace('мужчин', "орков")
-      .replace('мужик', "орк")
-      .replace(/парень/i, "таурен")
-      .replace('девушкам', "эльфийкам")
-      .replace(/девушка/i, "ночной эльф")
-      .replace('маскулинность', "шаманизм")
-      .replace(/сексуальн/i, 'некротичн')
-      .replace('бьюти', "некро")
-      .replace('порно', "проклятия")
-      .replace('Аборты', "Заклинания")
-      .replace(/абьюзер/i, 'дворф')    
-      .replace(/гетеро/i, 'гоблин')
-      .replace(/([\s?+|\.?+|,?])би([\s?+|\.?+|,?])/ig, '$1тролль$2')
-      .replace(/бисексуал/i, 'тролль')
-      .replace(/гендерн/i, 'расов')
-      .replace(/([\s?+|\.?+|,?])дев([\s?+|\.?+|,?])/ig, '$1орков$2')
-      .replace(/дев/i, 'орк')
-      .replace(/двачер/i, 'лордерон')
-      .replace(/([\s?+|\.?+|,?])женщин([\s?+|\.?+|,?])/ig, '$1орков$2')    
-      .replace(/женщин/i, 'орк')
-      .replace(/женские/i, 'орочьи')
-      .replace(/интерсек/i, 'Тралл')
-      .replace(/мизогин/i, 'некромант')    
-      .replace(/насильник/i, 'паладин')    
-      .replace(/патриархат/i, 'Альянс')
-      .replace(/сепарат/i, 'демон')
-      .replace(/сепарац/i, 'демон')
-      .replace(/феминизм/i, "Лок'тар")
-      .replace(/феминист/i, 'шаман')    
-      .replace(/радфем/i, "за Орду");
-    $(a).html(rep);
-  });
+
+var replacer = function() {
+	$('article').each ( (i, a) => {
+		var rep = $(a).html()
+			.replace ( /(радфем|феминизм)/i, "Лок'тар" )
+			.replace ( /феминист/i, "шаман" )
+			.replace ( /фем/i, "тролль" )
+
+			.replace ( /баб/i, "лучниц" )
+			.replace ( /никсельпиксель/i, "сильвана" )
+			.replace ( /девушка/i, "ночной эльф" )
+			.replace ( /девушк/i, "эльфийк" )
+			.replace ( /женск/i, "эльфийск" )
+			.replace ( /([\s?+|\.?+|,?])(дев|женщин)([\s?+|\.?+|,?])/ig, "$1ночных эльфов$3" )
+			.replace ( /(дев|женщин)/i, "ночных эльфов" )
+
+			.replace ( /бьюти/i, "некро" )
+			.replace ( /порно/i, "проклятия" )
+			.replace ( /проституция/i, "золотые рудники" )
+			.replace ( /сексуализация/i, "обращение в нежить" )
+			.replace ( /сексуальн/i, "некротичн" )
+			.replace ( /аборты/i, "заклинания" )
+
+			.replace ( /гетеро/i, "гоблин" )
+			.replace ( /транс/i, "грифон" )
+			.replace ( /интерсек/i, "Тралл" )
+			.replace ( /([\s?+|\.?+|,?])би([\s?+|\.?+|,?])/ig, "$1тролль$2" )
+			.replace ( /бисексуал/i, "тролль" )
+
+			.replace ( /парни/i, "таурены" )
+			.replace ( /парень/i, "таурен" )
+			.replace ( /мужчины/i, "орки" )
+			.replace ( /мужчина/i, "орк" )
+			.replace ( /мужчин/i, "орк" )
+			.replace ( /мужик/i, "орк" )
+
+			.replace ( /абьюзер/i, "дворф" )
+			.replace ( /гендерн/i, "расов" )
+			.replace ( /двачер/i, "лордерон" )
+			.replace ( /мизогин/i, "некромант" )
+			.replace ( /насильник/i, "паладин" )
+			.replace ( /маскулинность/i, "шаманизм" )
+
+			.replace ( /президент/i, "император" )
+			.replace ( /патриархат/i, "Альянс" )
+			.replace ( /патриарх/i, "матриарх" )
+			.replace ( /(рус|россий)ских/i, "ордынских" )
+			.replace ( /наркоман/i, "некромант" )
+			.replace ( /война/i, "джихад" )
+			.replace ( /сепара[т|ц]/i, "демон" );
+		$(a).html(rep);
+	} );
 }
-setInterval(replacer, 1000);
+setInterval ( replacer, 1000 );
